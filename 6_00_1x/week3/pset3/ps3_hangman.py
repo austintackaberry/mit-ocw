@@ -127,7 +127,7 @@ def hangman(secretWord):
         if wordGuessed:
             print("Congratulations, you win! The word was " + secretWord)
             return
-    print("You guessed wrong 8 times. Wow...")
+    print("You guessed wrong 8 times. Wow... The secret word was " + secretWord)
     return
 
 
