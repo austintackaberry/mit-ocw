@@ -56,7 +56,7 @@ def isWordGuessed(secretWord, lettersGuessed):
     '''
     secretWordList = list(secretWord)
     combinedSet = set(lettersGuessed + secretWordList)
-    return len(combinedSet) == len(lettersGuessed)
+    return len(combinedSet) == len(set(lettersGuessed))
 
 
 def getGuessedWord(secretWord, lettersGuessed):
@@ -134,5 +134,7 @@ def hangman(secretWord):
 # When you've completed your hangman function, uncomment these two lines
 # and run this file to test! (hint: you might want to pick your own
 # secretWord while you're testing)
-secretWord = chooseWord(wordlist).lower()
-hangman(secretWord)
+print(isWordGuessed('grapefruit', [
+      'z', 'x', 'q', 'g', 'r', 'a', 'p', 'e', 'f', 'r', 'u', 'i', 't']))
+# secretWord = chooseWord(wordlist).lower()
+# hangman(secretWord)
