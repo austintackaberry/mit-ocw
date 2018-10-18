@@ -1,20 +1,23 @@
-school = 'Massachusetts Institute of Technology'
-numVowels = 0
-numCons = 0
-cons = ""
+def isIn(char, aStr):
+    '''
+    char: a single character
+    aStr: an alphabetized string
 
-for char in school:
-    if char == 'a' or char == 'e' or char == 'i' \
-       or char == 'o' or char == 'u':
-        numVowels += 1
-    elif char == 'o' or char == 'M':
-        # print(char)
-        print('feg')
-    else:
-        cons += char
-        print(numCons)
-        numCons -= 1
+    returns: True if char is in aStr; False otherwise
+    '''
+    if len(aStr) == 0: return False
+    if len(aStr) == 1:
+        if aStr == char: return True
+        return False
+    mid = len(aStr) // 2
+    print(mid)
+    print(aStr[mid])
+    print(ord(aStr[mid]))
 
-print(cons)
-print('numVowels is: ' + str(numVowels))
-print('numCons is: ' + str(numCons))
+    if ord(char) < ord(aStr[mid]):
+        return isIn(char, aStr[:mid]
+    if ord(char) > ord(aStr[mid]):
+        return isIn(aStr[mid+1:]
+    if ord(char) == ord(aStr[mid]): return True
+
+print(isIn('a', 'random'))
